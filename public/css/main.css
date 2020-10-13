@@ -1,0 +1,21 @@
+/*o que é uma regra css?*/
+
+#body {
+  height: 100vh;
+  color: white;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 11.8rem/1 "Nunito", sans-serif;
+}
+
+body {
+  font-size: 1em;
+}
