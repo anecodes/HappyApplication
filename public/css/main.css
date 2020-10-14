@@ -1,8 +1,13 @@
 /*o que é uma regra css?*/
 
-#body {
+* {
+  box-sizing: border-box;
+}
+
+body {
   height: 100vh;
   color: white;
+  background: #ebf2f5;
 }
 
 :root {
@@ -13,7 +18,7 @@ body,
 input,
 button,
 textarea {
-  font: 400 11.8rem/1 "Nunito", sans-serif;
+  font: 400 11.8rem/1 'Nunito', sans-serif;
 }
 
 body {
