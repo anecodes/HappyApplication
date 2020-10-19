@@ -6,8 +6,12 @@ const options = {
     zoomControl: false
 }
 
+// Get values from html
+const lat = document.querySelector('span[data-lat]').dataset.lat
+const lng = document.querySelector('span[data-lng]').dataset.lng
+
 // Latitude e longitude do mapa inseridos através de array [0,1] > setView
-const map = L.map('mapid', options).setView([-27.2204301,-49.6508993], 15)
+const map = L.map('mapid', options).setView([lat, lng], 15)
 
 // Função tileLayer
 L.tileLayer(
@@ -16,7 +20,7 @@ L.tileLayer(
 
 // Create icon
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29,68],
     popupAnchor: [170,2]
@@ -25,8 +29,9 @@ const icon = L.icon({
 
 
 //Create and add marker
+
     L
-    .marker([-27.2204301,-49.6508993], { icon })
+    .marker([lat, lng], { icon })
     .addTo(map)
 
 
